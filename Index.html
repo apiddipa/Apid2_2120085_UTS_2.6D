@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            margin: 5px;
+            padding: 10px;
+            width: 100px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Penjumlahan Sederhana</h1>
+        <input type="number" id="num1" placeholder="Angka pertama">
+        <input type="number" id="num2" placeholder="Angka kedua">
+        <br>
+        <button onclick="calculateSum()">Hitung</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        function calculateSum() {
+            // Ambil nilai dari input
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+
+            // Konversi nilai input ke angka
+            var number1 = parseFloat(num1);
+            var number2 = parseFloat(num2);
+
+            // Hitung hasil penjumlahan
+            var sum = number1 + number2;
+
+            // Tampilkan hasil
+            document.getElementById('result').innerText = 'Hasil: ' + sum;
+        }
+    </script>
+</body>
+</html>
